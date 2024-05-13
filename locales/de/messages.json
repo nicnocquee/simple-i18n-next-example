@@ -1,0 +1,8 @@
+{
+  "hello": "Hallo Welt!",
+  "greeting": "Hallo {{name}}!",
+  "bye": "Auf Wiedersehen {{name}}!",
+  "home": "Startseite",
+  "german": "Deutsch",
+  "english": "Englisch"
+}

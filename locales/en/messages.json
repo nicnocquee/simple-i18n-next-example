@@ -1,0 +1,8 @@
+{
+  "hello": "Hello world!",
+  "greeting": "Hello {{name}}!",
+  "bye": "Bye {{name}}!",
+  "home": "Home",
+  "german": "German",
+  "english": "English"
+}
