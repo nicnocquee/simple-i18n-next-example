@@ -1,6 +1,6 @@
 # About
 
-This is a Next.js sample project that uses [simple-i18n-next](https://github.com/simple-i18n/simple-i18n-next) to generate a multi-language Next.js app.
+This is a Next.js sample project that uses [simple-i18n-next](https://github.com/nicnocquee/simple-i18n-next) to generate a multi-language Next.js app.
 
 # Getting Started
 
