@@ -10,9 +10,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.2.3",
+    "@types/mdx": "^2.0.13",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "url-matcher": "^0.2.2"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -21,7 +26,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
-    "simple-i18n-next": "^0.0.2",
+    "simple-i18n-next": "^0.0.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

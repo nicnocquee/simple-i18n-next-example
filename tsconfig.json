@@ -26,6 +26,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
+    "types.d.ts",
     "locales/.generated/**/*"
   ],
   "exclude": ["node_modules"]

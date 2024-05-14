@@ -1,8 +1,11 @@
 {
+  "title": "Home",
   "hello": "Hello world!",
+  "info": "This page is server rendered.",
   "greeting": "Hello {{name}}!",
   "bye": "Bye {{name}}!",
   "home": "Home",
   "german": "German",
-  "english": "English"
+  "english": "English",
+  "go_to_client": "Go to client"
 }
