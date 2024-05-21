@@ -7,5 +7,11 @@
   "home": "Home",
   "german": "German",
   "english": "English",
-  "go_to_client": "Go to client"
+  "go_to_client": "Go to client",
+  "book_one": "One book",
+  "book_other": "{{count}} books",
+  "movie_ordinal_one": "1st movie",
+  "movie_ordinal_two": "2nd movie",
+  "movie_ordinal_few": "{{count}}rd movie",
+  "movie_ordinal_other": "{{count}}th movie"
 }

@@ -12,12 +12,38 @@ import { matchPattern } from "url-matcher";
 
 export default function ClientComponent() {
   const lang = useSelectedLanguageFromPathname();
-  const strings = useStrings(["bye", "home", "english", "german"], lang);
+  const [strings, plurals] = useStrings(
+    [
+      "bye",
+      "home",
+      "english",
+      "german",
+      "bookWithCount",
+      "movieWithOrdinalCount",
+    ],
+    lang
+  );
   if (!strings) return null;
+  if (!plurals) return null;
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>{interpolateTemplate(strings.bye, { name: "John" })}</h1>
       <Link href={`/`}>{strings.home}</Link>
+      <div>
+        <p>{plurals.bookWithCount(1)}</p>
+        <p>{plurals.bookWithCount(2)}</p>
+        <p>{plurals.bookWithCount(3)}</p>
+        <p>{plurals.bookWithCount(4)}</p>
+        <p>{plurals.bookWithCount(5)}</p>
+      </div>
+
+      <div>
+        <p>{plurals.movieWithOrdinalCount(1)}</p>
+        <p>{plurals.movieWithOrdinalCount(2)}</p>
+        <p>{plurals.movieWithOrdinalCount(3)}</p>
+        <p>{plurals.movieWithOrdinalCount(4)}</p>
+        <p>{plurals.movieWithOrdinalCount(5)}</p>
+      </div>
       <div className="space-x-4">
         <Link className="underline font-bold" href={`/en/client`}>
           {strings.english}

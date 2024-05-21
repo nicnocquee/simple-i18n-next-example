@@ -1,11 +1,13 @@
 import { Index } from "@/locales/.generated/locales-markdown";
 import {
   SupportedLanguage,
+  bookWithCount,
   english,
   german,
   goToClient,
   greeting,
   info,
+  movieWithOrdinalCount,
   title,
 } from "@/locales/.generated/server";
 import Link from "next/link";
@@ -24,6 +26,20 @@ export default function Home({
       <h1 className="text-4xl font-bold">{title(lang)}</h1>
       <p>{greeting(lang, { name: "John" })}</p>
       <p>{info(lang)}</p>
+      <div>
+        <p>{movieWithOrdinalCount(lang, 1)}</p>
+        <p>{movieWithOrdinalCount(lang, 2)}</p>
+        <p>{movieWithOrdinalCount(lang, 3)}</p>
+        <p>{movieWithOrdinalCount(lang, 4)}</p>
+        <p>{movieWithOrdinalCount(lang, 5)}</p>
+      </div>
+      <div>
+        <p>{bookWithCount(lang, 1)}</p>
+        <p>{bookWithCount(lang, 2)}</p>
+        <p>{bookWithCount(lang, 3)}</p>
+        <p>{bookWithCount(lang, 4)}</p>
+        <p>{bookWithCount(lang, 5)}</p>
+      </div>
       <Index lang={lang} />
       <Link className="underline font-bold" href={`/${lang}/client`}>
         {goToClient(lang)}
