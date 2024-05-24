@@ -60,6 +60,9 @@ export default function Home({
         <Link className="underline font-bold" href={`/de`}>
           {german(lang)}
         </Link>
+        <Link className="underline font-bold" href={`/${lang}/about`}>
+          {`About page`}
+        </Link>
       </div>
     </main>
   );

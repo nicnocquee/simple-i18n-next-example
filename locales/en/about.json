@@ -1,0 +1,10 @@
+{
+  "title": "About",
+  "description": "This is an example of using a translations from about.json.",
+  "greeting": "Hello {{name}}!",
+  "car_one": "One car",
+  "car_other": "{{count}} cars",
+  "nested": {
+    "key": "Nested key"
+  }
+}
