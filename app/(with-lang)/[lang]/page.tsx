@@ -9,6 +9,9 @@ import {
   info,
   movieWithOrdinalCount,
   title,
+  clientTitle,
+  clientGreeting,
+  clientBye,
 } from "@/locales/.generated/server";
 import Link from "next/link";
 
@@ -39,6 +42,12 @@ export default function Home({
         <p>{bookWithCount(lang, 3)}</p>
         <p>{bookWithCount(lang, 4)}</p>
         <p>{bookWithCount(lang, 5)}</p>
+      </div>
+      <div>
+        <p>Nested keys:</p>
+        <p>{clientTitle(lang)}</p>
+        <p>{clientGreeting(lang, { name: "John" })}</p>
+        <p>{clientBye(lang, { name: "John" })}</p>
       </div>
       <Index lang={lang} />
       <Link className="underline font-bold" href={`/${lang}/client`}>

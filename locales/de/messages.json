@@ -10,5 +10,10 @@
   "go_to_client": "Gehe zu client",
   "book_one": "Ein Buch",
   "book_other": "{{count}} Bücher",
-  "movie_ordinal_other": "{{count}}. Film"
+  "movie_ordinal_other": "{{count}}. Film",
+  "client": {
+    "title": "Client",
+    "greeting": "Hallo client {{name}}!",
+    "bye": "Auf Wiedersehen client {{name}}!"
+  }
 }

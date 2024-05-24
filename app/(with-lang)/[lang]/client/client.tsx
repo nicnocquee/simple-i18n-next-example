@@ -20,6 +20,8 @@ export default function ClientComponent() {
       "german",
       "bookWithCount",
       "movieWithOrdinalCount",
+      "clientTitle",
+      "clientGreeting",
     ],
     lang
   );
@@ -43,6 +45,10 @@ export default function ClientComponent() {
         <p>{plurals.movieWithOrdinalCount(3)}</p>
         <p>{plurals.movieWithOrdinalCount(4)}</p>
         <p>{plurals.movieWithOrdinalCount(5)}</p>
+      </div>
+      <div>
+        <p>{strings.clientTitle}</p>
+        <p>{interpolateTemplate(strings.clientGreeting, { name: "John" })}</p>
       </div>
       <div className="space-x-4">
         <Link className="underline font-bold" href={`/en/client`}>

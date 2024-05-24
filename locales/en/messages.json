@@ -13,5 +13,10 @@
   "movie_ordinal_one": "1st movie",
   "movie_ordinal_two": "2nd movie",
   "movie_ordinal_few": "{{count}}rd movie",
-  "movie_ordinal_other": "{{count}}th movie"
+  "movie_ordinal_other": "{{count}}th movie",
+  "client": {
+    "title": "Client",
+    "greeting": "Hello client {{name}}!",
+    "bye": "Bye client {{name}}!"
+  }
 }
