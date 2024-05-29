@@ -1,0 +1,7 @@
+# About
+
+Hello! This is an example markdown file to demonstrate how to use markdown files with simple-i18n-next. Why only use JSON files if you can also provide different markdown files for different languages?
+
+This markdown can receive a `userId` props which currently is <code>{props.userId}</code>. The page component that renders this markdown obtains the `userId` from the pathname and passes it to the markdown component. Check out this page that has `userId` `42`: <a href={props.demoLink}>{props.demoLink}</a>.
+
+**It's completely type safe too.** The CLI generates the required props for the markdown component so that you can safely use it in your pages. For example, if you don't pass `userId` props to the markdown component, it will throw an error.
