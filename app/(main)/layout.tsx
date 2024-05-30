@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import { SupportedLanguage } from "@/locales/.generated/server";
+import rtl from "rtl-detect";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export default function RootLayout({
   };
 }>) {
   return (
-    <html lang={lang}>
+    <html lang={lang} dir={rtl.getLangDir(lang)}>
       <body className={inter.className}>{children}</body>
     </html>
   );
