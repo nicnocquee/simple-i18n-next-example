@@ -20,10 +20,18 @@ export default function AboutPage({
       <p>{aboutCarWithCount(lang, 10)}</p>
       <p>{aboutNestedKey(lang)}</p>
       <div>
-        <Link className="underline font-bold" href={`/en/about`}>
+        <Link
+          prefetch={false}
+          className="underline font-bold"
+          href={`/en/about`}
+        >
           {english(lang)}
         </Link>
-        <Link className="underline font-bold" href={`/de/about`}>
+        <Link
+          prefetch={false}
+          className="underline font-bold"
+          href={`/de/about`}
+        >
           {german(lang)}
         </Link>
       </div>

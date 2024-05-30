@@ -50,17 +50,25 @@ export default function Home({
         <p>{clientBye(lang, { name: "John" })}</p>
       </div>
       <Index lang={lang} />
-      <Link className="underline font-bold" href={`/${lang}/client`}>
+      <Link
+        prefetch={false}
+        className="underline font-bold"
+        href={`/${lang}/client`}
+      >
         {goToClient(lang)}
       </Link>
       <div className="space-x-4">
-        <Link className="underline font-bold" href={`/en`}>
+        <Link prefetch={false} className="underline font-bold" href={`/en`}>
           {english(lang)}
         </Link>
-        <Link className="underline font-bold" href={`/de`}>
+        <Link prefetch={false} className="underline font-bold" href={`/de`}>
           {german(lang)}
         </Link>
-        <Link className="underline font-bold" href={`/${lang}/about`}>
+        <Link
+          prefetch={false}
+          className="underline font-bold"
+          href={`/${lang}/about`}
+        >
           {`About page`}
         </Link>
       </div>

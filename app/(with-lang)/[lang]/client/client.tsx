@@ -28,7 +28,9 @@ export default function ClientComponent() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>{interpolateTemplate(strings.bye, { name: "John" })}</h1>
-      <Link href={`/`}>{strings.home}</Link>
+      <Link prefetch={false} href={`/`}>
+        {strings.home}
+      </Link>
       <div>
         <p>{plurals.bookWithCount(1)}</p>
         <p>{plurals.bookWithCount(2)}</p>
@@ -49,10 +51,18 @@ export default function ClientComponent() {
         <p>{interpolateTemplate(strings.clientGreeting, { name: "John" })}</p>
       </div>
       <div className="space-x-4">
-        <Link className="underline font-bold" href={`/en/client`}>
+        <Link
+          prefetch={false}
+          className="underline font-bold"
+          href={`/en/client`}
+        >
           {strings.english}
         </Link>
-        <Link className="underline font-bold" href={`/de/client`}>
+        <Link
+          prefetch={false}
+          className="underline font-bold"
+          href={`/de/client`}
+        >
           {strings.german}
         </Link>
       </div>

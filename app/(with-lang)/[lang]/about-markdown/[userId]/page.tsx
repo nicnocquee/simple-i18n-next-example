@@ -23,6 +23,7 @@ export default function AboutMarkdownWithUserIdPage({
           {supportedLanguages.map((l) => {
             return (
               <Link
+                prefetch={false}
                 className="underline"
                 href={`/${l}/about-markdown/${userId}`}
                 key={l}
