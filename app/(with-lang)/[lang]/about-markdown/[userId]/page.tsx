@@ -2,7 +2,8 @@ import { About } from "@/locales/.generated/locales-markdown";
 import {
   SupportedLanguage,
   supportedLanguages,
-} from "@/locales/.generated/server";
+} from "@/locales/.generated/types";
+
 import Link from "next/link";
 
 export default function AboutMarkdownWithUserIdPage({

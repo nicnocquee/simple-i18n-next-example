@@ -2,8 +2,8 @@
   "title": "Über",
   "description": "Dies ist ein Beispiel für die Verwendung eines Translations aus about.json.",
   "greeting": "Hallo {{name}}!",
-  "car_one": "Ein Auto",
-  "car_other": "{{count}} Autos",
+  "car_one": "Ein CoolAuto",
+  "car_other": "{{count}} CoolAutos",
   "nested": {
     "key": "Verschachtelter Schlüssel"
   }

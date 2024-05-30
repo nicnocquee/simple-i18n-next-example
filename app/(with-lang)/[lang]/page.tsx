@@ -1,6 +1,5 @@
 import { Index } from "@/locales/.generated/locales-markdown";
 import {
-  SupportedLanguage,
   bookWithCount,
   english,
   german,
@@ -13,6 +12,7 @@ import {
   clientGreeting,
   clientBye,
 } from "@/locales/.generated/server";
+import { SupportedLanguage } from "@/locales/.generated/types";
 import Link from "next/link";
 
 export const generateStaticParams = () => {

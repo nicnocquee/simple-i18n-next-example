@@ -2,8 +2,8 @@
   "title": "About",
   "description": "This is an example of using a translations from about.json.",
   "greeting": "Hello {{name}}!",
-  "car_one": "One car",
-  "car_other": "{{count}} cars",
+  "car_one": "One coolcar",
+  "car_other": "{{count}} coolcars",
   "nested": {
     "key": "Nested key"
   }

@@ -1,5 +1,4 @@
 import {
-  SupportedLanguage,
   aboutCarWithCount,
   aboutDescription,
   aboutNestedKey,
@@ -7,6 +6,7 @@ import {
   english,
   german,
 } from "@/locales/.generated/server";
+import { SupportedLanguage } from "@/locales/.generated/types";
 import Link from "next/link";
 
 export default function AboutPage({

@@ -1,10 +1,8 @@
 "use client";
 
 import { useStrings } from "@/locales/.generated/client/hooks";
-import {
-  SupportedLanguage,
-  interpolateTemplate,
-} from "@/locales/.generated/server";
+import { interpolateTemplate } from "@/locales/.generated/common";
+import { SupportedLanguage } from "@/locales/.generated/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";

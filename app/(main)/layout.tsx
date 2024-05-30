@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
-import { SupportedLanguage } from "@/locales/.generated/server";
 import rtl from "rtl-detect";
+import { SupportedLanguage } from "@/locales/.generated/types";
 
 const inter = Inter({ subsets: ["latin"] });
 
