@@ -12,17 +12,22 @@ import {
   clientGreeting,
   clientBye,
 } from "@/locales/.generated/server";
-import { SupportedLanguage } from "@/locales/.generated/types";
 import Link from "next/link";
 
+import {
+  SupportedLanguage, // this is the type
+  defaultLanguage, // this is the default language
+  supportedLanguages, // this is the array of supported languages
+} from "@/locales/.generated/types";
+
 export const generateStaticParams = () => {
-  return ["en", "de"].map((lang) => ({ lang }));
+  return supportedLanguages.map((lang) => ({ lang }));
 };
 
 export const dynamicParams = false;
 
 export default function Home({
-  params: { lang },
+  params: { lang = defaultLanguage },
 }: Readonly<{ params: { lang: SupportedLanguage } }>) {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

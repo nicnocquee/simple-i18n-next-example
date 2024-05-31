@@ -1,16 +1,20 @@
-import { SupportedLanguage } from "@/locales/.generated/types";
+import {
+  SupportedLanguage,
+  defaultLanguage,
+  supportedLanguages,
+} from "@/locales/.generated/types";
 import ClientComponent from "./client";
 import ClientComponentWithPropsServer from "./client-with-props-server";
 import { hello } from "@/locales/.generated/server";
 
 export const generateStaticParams = () => {
-  return ["en", "de"].map((lang) => ({ lang }));
+  return supportedLanguages.map((lang) => ({ lang }));
 };
 
 export const dynamicParams = false;
 
 export default function ClientPage({
-  params: { lang },
+  params: { lang = defaultLanguage },
 }: Readonly<{ params: { lang: SupportedLanguage } }>) {
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
