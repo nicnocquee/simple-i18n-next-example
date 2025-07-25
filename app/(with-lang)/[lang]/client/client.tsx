@@ -1,7 +1,6 @@
 "use client";
 
 import { useStrings } from "@/locales/.generated/client/hooks";
-import { interpolateTemplate } from "@/locales/.generated/common";
 import { SupportedLanguage } from "@/locales/.generated/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,7 +9,7 @@ import { matchPattern } from "url-matcher";
 
 export default function ClientComponent() {
   const lang = useSelectedLanguageFromPathname();
-  const [strings, plurals] = useStrings(
+  const [strings, plurals, stringsWithArgs] = useStrings(
     [
       "bye",
       "home",
@@ -27,7 +26,7 @@ export default function ClientComponent() {
   if (!plurals) return null;
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>{interpolateTemplate(strings.bye, { name: "John" })}</h1>
+      <h1>{stringsWithArgs?.bye({ name: "John" })}</h1>
       <Link prefetch={false} href={`/`}>
         {strings.home}
       </Link>
@@ -48,7 +47,7 @@ export default function ClientComponent() {
       </div>
       <div>
         <p>{strings.clientTitle}</p>
-        <p>{interpolateTemplate(strings.clientGreeting, { name: "John" })}</p>
+        <p>{stringsWithArgs?.clientGreeting({ name: "John" })}</p>
       </div>
       <div className="space-x-4">
         <Link
