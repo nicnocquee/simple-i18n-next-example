@@ -5,13 +5,14 @@ import {
   aboutTitle,
   english,
   german,
-} from "@/locales/.generated/server";
+} from "@/locales/.generated/strings";
 import { SupportedLanguage } from "@/locales/.generated/types";
 import Link from "next/link";
 
-export default function AboutPage({
-  params: { lang },
-}: Readonly<{ params: { lang: SupportedLanguage } }>) {
+export default async function AboutPage({
+  params,
+}: Readonly<{ params: Promise<{ lang: SupportedLanguage }> }>) {
+  const { lang } = await params;
   return (
     <div>
       <h1>{aboutTitle(lang)}</h1>

@@ -1,10 +1,15 @@
-import { SupportedLanguage } from "@/locales/.generated/types";
+import { defaultLanguage, SupportedLanguage } from "@/locales/.generated/types";
 import AboutMarkdownWithUserIdPage from "./[userId]/page";
 
-export default function AboutMarkdownPage({
-  params: { lang },
+export default async function AboutMarkdownPage({
+  params,
 }: {
-  params: { lang: SupportedLanguage };
+  params: Promise<{ lang: SupportedLanguage }>;
 }) {
-  return <AboutMarkdownWithUserIdPage params={{ lang, userId: "No userId" }} />;
+  const { lang = defaultLanguage } = await params;
+  return (
+    <AboutMarkdownWithUserIdPage
+      params={Promise.resolve({ lang, userId: "No userId" })}
+    />
+  );
 }

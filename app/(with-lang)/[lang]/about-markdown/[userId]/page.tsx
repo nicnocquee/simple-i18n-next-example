@@ -6,11 +6,12 @@ import {
 
 import Link from "next/link";
 
-export default function AboutMarkdownWithUserIdPage({
-  params: { lang, userId },
+export default async function AboutMarkdownWithUserIdPage({
+  params,
 }: {
-  params: { userId: string; lang: SupportedLanguage };
+  params: Promise<{ userId: string; lang: SupportedLanguage }>;
 }) {
+  const { lang, userId } = await params;
   return (
     <div className="w-full min-h-screen bg-white">
       <div className="prose lg:prose-xl mx-auto py-8">
